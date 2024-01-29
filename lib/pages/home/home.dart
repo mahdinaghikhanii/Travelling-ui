@@ -9,56 +9,50 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          leadingWidth: 0,
-          automaticallyImplyLeading: false,
-          centerTitle: false,
-          title: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Expanded(
-                flex: 0,
-                child: Container(
-                    height: 44,
-                    padding: const EdgeInsets.only(
-                        left: 4, top: 4, bottom: 4, right: 15),
-                    decoration: ShapeDecoration(
-                        color: const Color(0xFFF6F6F8),
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(22),
-                        )),
-                    child: Row(
-                      children: [
-                        ClipRRect(
+            leadingWidth: 0,
+            automaticallyImplyLeading: false,
+            centerTitle: false,
+            title: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Expanded(
+                      flex: 0,
+                      child: Container(
+                          height: 44,
+                          padding: const EdgeInsets.only(
+                              left: 4, top: 4, bottom: 4, right: 15),
+                          decoration: ShapeDecoration(
+                              color: const Color(0xFFF6F6F8),
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(22),
+                              )),
+                          child: Row(children: [
+                            ClipRRect(
+                              borderRadius: BorderRadius.circular(40),
+                              child: Image.asset(
+                                'assets/me.jpg',
+                                width: 37,
+                                height: 37,
+                              ),
+                            ),
+                            const Padding(
+                                padding: EdgeInsets.only(left: 6),
+                                child: Text('Mahdi',
+                                    style: TextStyle(
+                                      color: Color(0xFF1B1E28),
+                                      fontSize: 14,
+                                      fontWeight: FontWeight.w500,
+                                      height: 0.08,
+                                    )))
+                          ]))),
+                  Container(
+                      width: 44,
+                      height: 44,
+                      decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(40),
-                          child: Image.asset(
-                            'assets/me.jpg',
-                            width: 37,
-                            height: 37,
-                          ),
-                        ),
-                        const Padding(
-                            padding: EdgeInsets.only(left: 6),
-                            child: Text('Mahdi',
-                                style: TextStyle(
-                                  color: Color(0xFF1B1E28),
-                                  fontSize: 14,
-                                  fontWeight: FontWeight.w500,
-                                  height: 0.08,
-                                )))
-                      ],
-                    )),
-              ),
-              Container(
-                width: 44,
-                height: 44,
-                decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(40),
-                    color: const Color(0xFFF6F6F8)),
-                child: const Icon(Icons.notifications_outlined),
-              )
-            ],
-          ),
-        ),
+                          color: const Color(0xFFF6F6F8)),
+                      child: const Icon(Icons.notifications_outlined))
+                ])),
         body: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [titleText(), const DestinantionWidgets()]));
