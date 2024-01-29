@@ -57,7 +57,7 @@ class _NavBarPagesState extends State<NavBarPages> {
         items: <BottomNavyBarItem>[
           BottomNavyBarItem(
               activeColor: const Color(0xFF24BAEC),
-              title: const Text('Item One'),
+              title: const Text('Home'),
               icon: const Icon(Icons.home)),
           BottomNavyBarItem(
               inactiveColor: const Color(0xFF7C838D),

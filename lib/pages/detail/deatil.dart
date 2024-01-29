@@ -44,6 +44,64 @@ class DetailPage extends StatelessWidget {
                           image: AssetImage("assets/2.png"),
                           fit: BoxFit.cover)),
                 ),
+                const Positioned(
+                    right: 0,
+                    left: 0,
+                    top: 60,
+                    child: Text(
+                      'Details',
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 18,
+                        fontFamily: 'SF UI Display',
+                        fontWeight: FontWeight.w600,
+                        height: 0.07,
+                      ),
+                    )),
+                Positioned(
+                    left: 20,
+                    top: 42,
+                    child: Opacity(
+                      opacity: 0.20,
+                      child: InkWell(
+                        onTap: () => Navigator.pop(context),
+                        child: Container(
+                          width: 34,
+                          height: 34,
+                          decoration: ShapeDecoration(
+                            color: const Color(0xFF1B1E28),
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(20),
+                            ),
+                          ),
+                          child: const Icon(
+                            Icons.arrow_back,
+                            color: Colors.white,
+                          ),
+                        ),
+                      ),
+                    )),
+                Positioned(
+                    right: 20,
+                    top: 42,
+                    child: Opacity(
+                      opacity: 0.20,
+                      child: Container(
+                        width: 34,
+                        height: 34,
+                        decoration: ShapeDecoration(
+                          color: const Color(0xFF1B1E28),
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(20),
+                          ),
+                        ),
+                        child: const Icon(
+                          Icons.bookmark_outline,
+                          color: Colors.white,
+                        ),
+                      ),
+                    )),
                 Positioned(
                   bottom: 0,
                   child: Container(
