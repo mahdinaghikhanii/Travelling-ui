@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:readmore/readmore.dart';
+import 'package:travalling_ui/pages/view_image/view_image.dart';
 
 class DetailPage extends StatelessWidget {
   const DetailPage({super.key});
@@ -36,13 +37,21 @@ class DetailPage extends StatelessWidget {
               Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
             Stack(
               children: [
-                Container(
-                  width: MediaQuery.sizeOf(context).width,
-                  height: 380,
-                  decoration: const BoxDecoration(
-                      image: DecorationImage(
-                          image: AssetImage("assets/2.png"),
-                          fit: BoxFit.cover)),
+                InkWell(
+                  onTap: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const ViewImagePage()));
+                  },
+                  child: Container(
+                    width: MediaQuery.sizeOf(context).width,
+                    height: 380,
+                    decoration: const BoxDecoration(
+                        image: DecorationImage(
+                            image: AssetImage("assets/2.png"),
+                            fit: BoxFit.cover)),
+                  ),
                 ),
                 const Positioned(
                     right: 0,
