@@ -51,7 +51,7 @@ class ProfilePage extends StatelessWidget {
           customListTile(Icons.bookmark_outline, "Bookmarked", context),
           customListTile(Icons.trip_origin_sharp, "Previous Trips", context),
           customListTile(Icons.settings_outlined, "Settings", context),
-          customListTile(Icons.app_blocking_outlined, "Version", context)
+          customListTile(Icons.logout, "Log out", context, logOut: true)
         ]));
   }
 }
@@ -157,22 +157,25 @@ Widget userPoints() {
   );
 }
 
-Widget customListTile(IconData iconData, String title, context) {
+Widget customListTile(IconData iconData, String title, context,
+    {bool? logOut = false}) {
   return Padding(
     padding: const EdgeInsets.symmetric(horizontal: 28, vertical: 0),
     child: Column(children: [
       Row(children: [
-        Icon(iconData, color: Colors.grey.shade500),
+        Icon(iconData,
+            color: logOut == true ? Colors.red : Colors.grey.shade500),
         const SizedBox(width: 13),
         Text(
           title,
-          style:
-              const TextStyle(color: Colors.black, fontWeight: FontWeight.w500),
+          style: TextStyle(
+              color: logOut == true ? Colors.red : Colors.black,
+              fontWeight: FontWeight.w500),
         ),
         const Spacer(),
         Icon(
           Icons.arrow_forward,
-          color: Colors.grey.shade500,
+          color: logOut == true ? Colors.red : Colors.grey.shade500,
         )
       ]),
       Container(
