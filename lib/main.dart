@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:travalling_ui/pages/home/home.dart';
-import 'package:travalling_ui/pages/view_image/view_image.dart';
 
 import 'pages/nav/navbar.dart';
 

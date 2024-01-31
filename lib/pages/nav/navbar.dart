@@ -1,6 +1,7 @@
 import 'package:bottom_navy_bar/bottom_navy_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:travalling_ui/pages/home/home.dart';
+import 'package:travalling_ui/pages/profile/profile.dart';
 
 class NavBarPages extends StatefulWidget {
   const NavBarPages({super.key});
@@ -42,9 +43,7 @@ class _NavBarPagesState extends State<NavBarPages> {
             Container(
               color: Colors.green,
             ),
-            Container(
-              color: Colors.blue,
-            ),
+            const ProfilePage()
           ],
         ),
       ),
@@ -69,8 +68,8 @@ class _NavBarPagesState extends State<NavBarPages> {
               icon: const Icon(Icons.chat_bubble)),
           BottomNavyBarItem(
               inactiveColor: const Color(0xFF7C838D),
-              title: const Text('Item Four'),
-              icon: const Icon(Icons.settings)),
+              title: const Text('Profile'),
+              icon: const Icon(Icons.person)),
         ],
       ),
     );
